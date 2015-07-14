@@ -1,2 +1,2 @@
 #!/bin/bash
-telegram-cli -k tg-server.pub -W -s Beyin.lua
+../tg/bin/telegram-cli -k ../tg/tg-server.pub -W -s Beyin.lua

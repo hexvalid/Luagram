@@ -29,7 +29,6 @@ function on_msg_receive (msg)
               mesaj_at (gonderen, durum)
           --
            elseif (gelen_mesaj=='!güncelle') then 
-              mesaj_at (gonderen, "Güncelleme başlatılıyor...")
               mesaj_at (gonderen, terminal("git pull"))
           --
            elseif (gelen_mesaj=='!selam') then 
