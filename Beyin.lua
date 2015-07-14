@@ -30,6 +30,9 @@ function on_msg_receive (msg)
           --
            elseif (gelen_mesaj=='!güncelle') then 
               mesaj_at (gonderen, terminal("git pull"))
+       if string.find(gelen_mesaj, "yeniden") and string.find(gelen_mesaj, "başla")  then
+              mesaj_at (gonderen, "Yeniden başlıyorum...")
+              terminal("./Restart.sh")
           --
            elseif (gelen_mesaj=='!selam') then 
               mesaj_at (gonderen, b(k(_merhaba)))
