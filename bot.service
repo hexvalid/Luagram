@@ -1,0 +1,10 @@
+[Unit]
+Description=Some text
+
+[Service]
+ExecStart= /root/tg/bin/telegram-cli -k /root/tg/tg-server.pub -W -s /root/Bot/Beyin.lua
+WorkingDirectory=/root/Bot
+
+[Install]
+WantedBy=multi-user.target
+
