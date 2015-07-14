@@ -7,7 +7,7 @@ require("KelimeDagarcigi");
 
 ----------------------TANIMLAMALAR----------------------
 bot_adi="[bot@Erkan ~]"
-versiyon="v0.0.3"
+versiyon="v0.0.4"
 on_ek='!'
 
 durum=versiyon.." ile çalışıyor durumdayım.\nIP Adresim: "..terminal("curl -s http://ipecho.net/plain").."\nÜzerinde çalıştığım makine'nin adı: "..terminal("cat /etc/hostname")
@@ -28,9 +28,10 @@ function on_msg_receive (msg)
        if string.find(gelen_mesaj, "durum") and string.find(gelen_mesaj, "ne")  then
               mesaj_at (gonderen, durum)
           --
-                            elseif (gelen_mesaj=='!ping') then 
-              mesaj_at (gonderen, terminal("ping localhost -c 2s"))
-
+           elseif (gelen_mesaj=='!güncelle') then 
+              mesaj_at (gonderen, "Güncelleme başlatılıyor...")
+              mesaj_at (gonderen, terminal("git pull"))
+          --
            elseif (gelen_mesaj=='!selam') then 
               mesaj_at (gonderen, b(k(_merhaba)))
           else
@@ -44,7 +45,6 @@ function on_msg_receive (msg)
   function mesaj_at (numara, mesaj)
         send_msg ((numara), bot_adi..": "..(mesaj), ok_cb, false)
   end
- 
    
  ----------------------KÖK FONKSİYONLAR----------------------
   function on_our_id (id)
