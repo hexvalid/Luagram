@@ -1,35 +1,42 @@
 #!/bin/lua
 
 require("Modul-OS");
+require("Dil");
+require("KelimeDagarcigi");
 
 
 ----------------------TANIMLAMALAR----------------------
-bot_adi="BOT"
-versiyon="v0.0.2"
+bot_adi="[bot@Erkan ~]"
+versiyon="v0.0.3"
 on_ek='!'
-merhaba="Merhaba! \nBen Erkan'ın Bot'uyum. Şuanki versiyonum: "..versiyon.." \n"
 
-durum="IP Adresim: "..terminal("curl -s http://ipecho.net/plain").."\nÜzerinde çalıştığım makine'nin adı: "..terminal("cat /etc/hostname")
+durum=versiyon.." ile çalışıyor durumdayım.\nIP Adresim: "..terminal("curl -s http://ipecho.net/plain").."\nÜzerinde çalıştığım makine'nin adı: "..terminal("cat /etc/hostname")
 
 
 
 function on_msg_receive (msg)
-      gelen_mesaj=msg.text
+      gelen_mesaj=string.lower(msg.text)
       gelen_mesaj_on_eki=string.sub(gelen_mesaj, 1,1)
       gonderen=msg.from.print_name
-      
       if msg.out then
           return
       end
-
+      --------------------------------------------
       if (gelen_mesaj_on_eki==on_ek) then
-          if (gelen_mesaj=='!durum') then 
+          ----------------------BURDA TETİKLEN
+          --Ne durumdasın?
+       if string.find(gelen_mesaj, "durum") and string.find(gelen_mesaj, "ne")  then
               mesaj_at (gonderen, durum)
-           elseif (gelen_mesaj=='!alfa') then 
-              mesaj_at (gonderen, "Tabi")
+          --
+                            elseif (gelen_mesaj=='!ping') then 
+              mesaj_at (gonderen, terminal("ping localhost -c 2s"))
+
+           elseif (gelen_mesaj=='!selam') then 
+              mesaj_at (gonderen, b(k(_merhaba)))
           else
-              mesaj_at(gonderen, "Anlamadım." )
+              mesaj_at(gonderen,  b(k(_anlamadim)))
           end
+          ----------------------BURDA SUS
       end
   end
   
