@@ -29,7 +29,7 @@ function on_msg_receive (msg)
               mesaj_at (gonderen, durum)
           --
        elseif (gelen_mesaj=='!wtf') then
-             mesaj_at (gonderen, "Hahahaha. Sana vatafak.")
+             mesaj_at (gonderen, "Hahahaha. Sana vatafak. x")
            
            elseif (gelen_mesaj=='!güncelle') then 
               mesaj_at (gonderen, terminal("git pull"))
