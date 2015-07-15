@@ -28,7 +28,7 @@ function on_msg_receive (msg)
        if string.find(gelen_mesaj, "durum") and string.find(gelen_mesaj, "ne")  then
               mesaj_at (gonderen, durum)
           --
-       else if (gelen_mesaj='!wtf') then
+       else if (gelen_mesaj=='!wtf') then
              mesaj_at (gonderen, "Hahahaha. Sana vatafak.")
            
            elseif (gelen_mesaj=='!güncelle') then 
