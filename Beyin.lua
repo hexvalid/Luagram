@@ -30,12 +30,6 @@ function on_msg_receive (msg)
 
     elseif (gelen_mesaj=='!wtf') then
       do
-        mesaj_at (gonderen, "3")
-        terminalx ("sleep 2")
-        mesaj_at (gonderen, "2")
-        terminalx ("sleep 2")
-        mesaj_at (gonderen, "1")
-        terminalx ("sleep 2")
         terminalx ("systemctl stop bot && sleep 2 && systemctl start bot")
       end
       --fonksiyon sonu
