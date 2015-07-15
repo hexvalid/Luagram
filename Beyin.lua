@@ -34,6 +34,14 @@ function on_msg_receive (msg)
       end
       --fonksiyon sonu
 
+    elseif (gelen_mesaj=='!gir') then
+      mesaj_at (gonderen, "aaaa...")
+      mesaj_at (gonderen, "aaaaaaa...")
+      mesaj_at (gonderen, "aaaaaaaaaa...")
+      mesaj_at (gonderen, "aaaaaaaaaaaaaa...")
+
+      --fonksiyon sonu
+
     elseif (gelen_mesaj=='!güncelle') then
       mesaj_at (gonderen, terminal("git pull"))
       --fonksiyon sonu
