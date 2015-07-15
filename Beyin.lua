@@ -1,13 +1,10 @@
 #!/bin/lua
-
+---Gerekli modüller
 require("Modul-OS");
 require("Dil");
 require("KelimeDagarcigi");
 
-
-----------------------TANIMLAMALAR----------------------
---Artık Atom editöre geçildi.
-
+---TANIMLAMALAR
 bot_adi="[bot@Erkan ~]"
 versiyon="v0.0.4"
 on_ek='!'
@@ -15,7 +12,7 @@ on_ek='!'
 durum=versiyon.." ile çalışıyor durumdayım.\nIP Adresim: "..terminal("curl -s http://ipecho.net/plain").."\nÜzerinde çalıştığım makine'nin adı: "..terminal("cat /etc/hostname")
 
 
-
+--Mesaj alındı fonksiyonu
 function on_msg_receive (msg)
   gelen_mesaj=string.lower(msg.text)
   gelen_mesaj_on_eki=string.sub(gelen_mesaj, 1,1)
@@ -31,8 +28,7 @@ function on_msg_receive (msg)
       mesaj_at (gonderen, durum)
       --
     elseif (gelen_mesaj=='!wtf') then
-      mesaj_at (gonderen, "Hahahaha. Sana vatafak. x")
-
+      mesaj_at (gonderen, "Hahahaha. Sana vatafak. xyz")
     elseif (gelen_mesaj=='!güncelle') then
       mesaj_at (gonderen, terminal("git pull"))
     elseif string.find(gelen_mesaj, "yeniden") and string.find(gelen_mesaj, "başla")  then
