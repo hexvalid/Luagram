@@ -7,4 +7,3 @@ WorkingDirectory=/root/Bot
 
 [Install]
 WantedBy=multi-user.target
-

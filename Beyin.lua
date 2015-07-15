@@ -23,22 +23,22 @@ function on_msg_receive (msg)
       end
       --------------------------------------------
       if (gelen_mesaj_on_eki==on_ek) then
-          ----------------------BURDA TETİKLEN
+          ----------------------BURDAPz TETİKLEN
           --Ne durumdasın?
        if string.find(gelen_mesaj, "durum") and string.find(gelen_mesaj, "ne")  then
               mesaj_at (gonderen, durum)
           --
        elseif (gelen_mesaj=='!wtf') then
              mesaj_at (gonderen, "Hahahaha. Sana vatafak. x")
-           
-           elseif (gelen_mesaj=='!güncelle') then 
+
+           elseif (gelen_mesaj=='!güncelle') then
               mesaj_at (gonderen, terminal("git pull"))
            elseif string.find(gelen_mesaj, "yeniden") and string.find(gelen_mesaj, "başla")  then
               mesaj_at (gonderen, "3 saniye sonra yeniden başlayacağım...")
               bekle(3)
               terminal("systemctl restart bot.service")
           --
-           elseif (gelen_mesaj=='!selam') then 
+           elseif (gelen_mesaj=='!selam') then
               mesaj_at (gonderen, b(k(_merhaba)))
           else
               mesaj_at(gonderen,  b(k(_anlamadim)))
@@ -46,28 +46,28 @@ function on_msg_receive (msg)
           ----------------------BURDA SUS
       end
   end
-  
+
 ----------------------ÖZEL FONKSİYONLAR----------------------
   function mesaj_at (numara, mesaj)
         send_msg ((numara), bot_adi..": "..(mesaj), ok_cb, false)
   end
-   
+
  ----------------------KÖK FONKSİYONLAR----------------------
   function on_our_id (id)
   end
-   
+
   function on_secret_chat_created (peer)
   end
-   
+
   function on_user_update (user)
   end
-   
+
   function on_chat_update (user)
   end
-   
+
   function on_get_difference_end ()
   end
-   
+
   function on_binlog_replay_end ()
   end
  ----------------------ÖLÜ KODLAR----------------------
