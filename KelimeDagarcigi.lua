@@ -8,4 +8,3 @@ _iyi_geceler = {'iyi geceler', 'iyi uykular', 'tatlı rüyalar', 'tatlı uykular
 _naber = {'naber', 'nasıl gidiyor', 'nasılsın'}
 --Anlamamak
 _anlamadim = {'anlamadım', 'dediğinden bir şey anlamadım.', 'ne?', '?', 'anlamıyorum'}
-    
