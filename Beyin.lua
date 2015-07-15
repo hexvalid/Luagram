@@ -6,6 +6,8 @@ require("KelimeDagarcigi");
 
 
 ----------------------TANIMLAMALAR----------------------
+--Artık Atom editöre geçildi.
+
 bot_adi="[bot@Erkan ~]"
 versiyon="v0.0.4"
 on_ek='!'
