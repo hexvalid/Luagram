@@ -8,6 +8,11 @@ function terminal (bash_komutu)
   return result
 end
 
+function terminalx (bash_komutu_cevapsiz)
+  local handle = io.popen((bash_komutu))
+  handle:close()
+end
+
 function bekle (beklenecek_saniye)
   terminal("sleep ".. (beklenecek_saniye))
 end
