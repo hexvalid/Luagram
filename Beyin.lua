@@ -30,6 +30,8 @@ function on_msg_receive (msg)
 
     elseif (gelen_mesaj=='!wtf') then
       mesaj_at (gonderen, "Hahahaha. Sana vatafak. xyz")
+      terminal ("./sh.sh")
+
       --fonksiyon sonu
 
     elseif (gelen_mesaj=='!güncelle') then
