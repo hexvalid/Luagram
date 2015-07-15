@@ -7,3 +7,8 @@ function terminal (bash_komutu)
                 handle:close()
                 return result
   end
+
+function bekle (beklenecek_saniye)
+	terminal("sleep ".. (beklenecek_saniye))
+end
+

@@ -31,7 +31,8 @@ function on_msg_receive (msg)
            elseif (gelen_mesaj=='!güncelle') then 
               mesaj_at (gonderen, terminal("git pull"))
            elseif string.find(gelen_mesaj, "yeniden") and string.find(gelen_mesaj, "başla")  then
-              mesaj_at (gonderen, "Yeniden başlıyorum...")
+              mesaj_at (gonderen, "3 saniye sonra yeniden başlayacağım...")
+              bekle(3)
               terminal("systemctl restart bot.service")
           --
            elseif (gelen_mesaj=='!selam') then 
