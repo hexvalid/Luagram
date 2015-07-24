@@ -30,7 +30,7 @@ function on_msg_receive (msg)
 
     elseif (gelen_mesaj=='!wtf') then
       do
-        os.execute ("systemctl stop bot && sleep 2 && systemctl start bot")
+        os.execute ("systemctl restart bot")
       end
       --fonksiyon sonu
 
