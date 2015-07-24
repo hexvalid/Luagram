@@ -28,9 +28,9 @@ function on_msg_receive (msg)
       mesaj_at (gonderen, durum)
       --fonksiyon sonu
 
-    elseif (gelen_mesaj=='!wtf') then
+    elseif (gelen_mesaj=='!öl') then
       do
-        os.execute ("systemctl stop bot && sleep 2 && systemctl start bot")
+        os.execute ("reboot")
       end
       --fonksiyon sonu
 
