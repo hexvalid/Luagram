@@ -6,7 +6,7 @@ require("KelimeDagarcigi");
 
 ---TANIMLAMALAR
 bot_adi="[bot@Erkan ~]"
-versiyon="v0.0.4"
+versiyon="v0.0.5"
 on_ek='!'
 
 durum=versiyon.." ile çalışıyor durumdayım.\nIP Adresim: "..terminal("curl -s http://ipecho.net/plain").."\nÜzerinde çalıştığım makine'nin adı: "..terminal("cat /etc/hostname")
