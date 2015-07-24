@@ -1,13 +1,14 @@
 [Unit]
 Description=Bot bootstrap servisi
-After=network.target network-online.target
+After=network-online.target
+Wants=network-online.target
 
 [Service]
-ExecStart=/root/tg/bin/telegram-cli -k /root/tg/tg-server.pub -W -s /root/Bot/Beyin.lua -d -vvvv -P 2391  -L /root/Bot/telegram.log
+Type=simple
+ExecStart=/root/tg/bin/telegram-cli -k /root/tg/tg-server.pub -s /root/Bot/Beyin.lua
 WorkingDirectory=/root/Bot
 KillSignal=SIGKILL
-RestartSec=5
-Restart=on-failure
+SendSIGKILL=yes
 
 [Install]
 WantedBy=multi-user.target
